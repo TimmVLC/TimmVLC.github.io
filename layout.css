@@ -31,12 +31,16 @@ ul {
   }
 
   
+  body {
+    background-color: aquamarine;
+  }
+
   .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(80,200,175);
+  background-color: mediumturquoise;
   padding: 10px;
   text-align: center;
 }

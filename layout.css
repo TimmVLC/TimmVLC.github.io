@@ -38,6 +38,15 @@ ul {
     text-decoration: none;
     font-family: none;
   }
+
+  li p {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: none;
+  }
   
   li a:hover {
     background-color: #111;
@@ -69,6 +78,4 @@ ul {
   height: 43px;
   width: 42px;
   cursor: pointer;
-  color: white;
-  padding: 14px 16px;
 }

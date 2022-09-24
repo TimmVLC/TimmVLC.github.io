@@ -64,9 +64,11 @@ ul {
 }
 
 #icon{
-  position: fixed;
-  right: auto;
+  position: relative;
+  right: 2px;
   height: 43px;
   width: 42px;
   cursor: pointer;
+  float: right;
+  top:-45px;
 }

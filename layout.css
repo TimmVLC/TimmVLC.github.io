@@ -48,6 +48,7 @@ ul {
     font-family: none;
     position: fixed;
     top: -5px;
+    right: 500px;
   }
   
   li a:hover {

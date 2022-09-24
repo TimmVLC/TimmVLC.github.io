@@ -69,4 +69,6 @@ ul {
   height: 43px;
   width: 42px;
   cursor: pointer;
+  color: white;
+  padding: 14px 16px;
 }

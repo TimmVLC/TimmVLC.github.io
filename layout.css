@@ -45,7 +45,10 @@ ul {
   text-align: center;
 }
 
-#icon{
-    width: 30px;
-    cursor: pointer
+.class{
+  position: fixed;
+  right: auto;
+  height: 43px;
+  width: 42px;
+  cursor: pointer
 }

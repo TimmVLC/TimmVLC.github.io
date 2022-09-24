@@ -40,7 +40,7 @@ ul {
   }
 
   li p {
-    display: inline-block;
+    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -49,6 +49,7 @@ ul {
     position: fixed;
     top: -7px;
     right: 700px;
+    float: right;
   }
   
   li a:hover {

@@ -1,3 +1,10 @@
+:root{
+  --primary-color: rgba(127,255,212,0.5);
+  --secondary-color: rgba(127, 255, 212, 0.75);
+  --tertiary-color: linear-gradient(60deg, rgb(75, 100, 200,3), rgb(0, 255, 150,3));
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -27,12 +34,12 @@ ul {
   }
 
   .active {
-    background-image: linear-gradient(60deg, rgb(75, 100, 200,3), rgb(0, 255, 150,3));
+    background-image: var(--tertiary-color);
   }
 
   
   body {
-    background-color: rgba(127,255,212,0.5);
+    background-color: var(--primary-color);
   }
 
   .footer {
@@ -40,7 +47,7 @@ ul {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(127, 255, 212, 0.75);
+  background-color: var(--secondary-color);
   padding: 10px;
   text-align: center;
 }
@@ -50,5 +57,5 @@ ul {
   right: auto;
   height: 43px;
   width: 42px;
-  cursor: pointer
+  cursor: pointer;
 }

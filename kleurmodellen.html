@@ -6,12 +6,16 @@
             <meta charset="utf-8">
         </head>
         <body>
-    
+            <nav>
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="binairstelsel.html">Binair stelsel</a></li>
             <li><a href="kleurmodellen.html" class="active">Kleurmodellen</a></li>
             </ul>
+            </nav>
+
+            
+            <button onclick="myFunction()" class="button" >Lightswitch</button>
 
             <br>
             Hier komt uitleg over de verschillende kleurmodellen.
@@ -23,7 +27,14 @@
                 <p>
                     Gemaakt door Tim de Jongh
                 </p>
-              </div>
-    
+            </div>
+            
+            <script>
+                function myFunction() {
+                    var element = document.body;
+                    element.classList.toggle("dark-theme");
+                }
+            </script>
+
         </body>
     </html>

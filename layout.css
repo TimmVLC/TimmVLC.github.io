@@ -48,12 +48,12 @@ ul {
   }
 
   
-  body {
+body {
     background-color: var(--primary-color);
     color: var(--quinary-color);
   }
 
-  .footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;

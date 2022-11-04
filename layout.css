@@ -1,86 +1,85 @@
-:root{
+:root{ /*Met :root worden de standaard kleuren bepaald. Ik heb ze --primary-color etc. genoemd omdat ik ze dan maar op 1 plek hoef te veranderen waardoor het overzichtelijker is.*/
   --primary-color: rgba(127,255,212,0.5);
   --secondary-color: rgba(127, 255, 212, 1);
-  --tertiary-color: linear-gradient(60deg, rgb(75, 100, 200), rgb(0, 255, 150));
+  --tertiary-color: linear-gradient(60deg, rgb(75, 100, 200), rgb(0, 255, 150)); /*dit is een gradient die 60 graden is gedraait*/
   --quaternary-color: #333;
   --quinary-color: black;
 }
 
 
-.dark-theme{
+.dark-theme{ /*Dit is de dark-theme. Wanneer op een knop wordt gedrukt worden via javascript deze kleuren aangezet in plaats van de standaard kleuren.*/
   --primary-color: rgb(48, 41, 93);
   --secondary-color: rgb(36, 30, 69);
-  --tertiary-color: linear-gradient(60deg, rgb(25, 100, 175), rgb(175, 0, 175));
+  --tertiary-color: linear-gradient(60deg, rgb(25, 100, 175), rgb(175, 0, 175)); /*dit is een gradient die 60 graden is gedraait*/
   --quaternary-color: #222;
   --quinary-color: white;
 }
 
-ul {
+ul { /*Dit zijn de waarden voor het menu.*/
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--quaternary-color);
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    width: 100%;
+    margin: 0; /*margin zorgt dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten.*/
+    padding: 0; /*padding zorgt ervoor dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten. Het verschil tussen padding en margin is dat bij padding het in het element zit en bij margin erbuiten*/
+    overflow: hidden; /*overflow bepaalt wat er moet gebeuren als content buiten de doos om een element is*/
+    background-color: var(--quaternary-color); /*background-color geeft de achtergrondskleur aan*/
+    position: sticky;/*position:sticky zorgt ervoor dat het menu aan de bovenkant blijft plakken wanneer je ver genoeg naar beneden scrolt*/
+    top: 0; /*top plaatst het menu aan de bovenkant van het scherm*/
+    width: 100%; /*de width is 100% dus het menu gaat helemaal van links naar rechts op het scherm*/
   }
   
-  li {
-    float: left;
+  li { /*dit zijn de waarden voor knoppen van het menu*/
+    float: left; /*hiermee worden de knoppen naar de linkerkant verplaatst*/
   }
   
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: none;
+  li a { /*Dit zijn de waarden voor de tekst van het menu*/
+    display: block; /*Dit zorgt dat de tekst de hele lijn opneemt*/
+    color: white; /*Dit is de kleur van de tekst*/
+    text-align: center; /*hiermee wordt de tekst in het midden van de knop geplaatst*/
+    padding: 14px 16px; /*padding zorgt ervoor dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten. Het verschil tussen padding en margin is dat bij padding het in het element zit en bij margin erbuiten*/
+    text-decoration: none; /*Dit geeft de decoratie van de tekst weer*/
+    font-family: none; /*dit geeft weer welk font de tekst moet gebruiken, bijvoorbeeld arial*/
   }
   
-  li a:hover {
-    background-color: #111;
+  li a:hover { /*Dit zijn de waarden voor de knoppen van het menu wanneer je erover hovert met je muis*/
+    background-color: #111; /*dit is de achtergrondskleur van de knoppen van het menu wanneer je erover hovert met je muis*/
   }
 
-  .active {
-    background-image: var(--tertiary-color);
+  .active { /*Dit zijn de waarden die worden gegeven aan elk element met class="active"*/
+    background-image: var(--tertiary-color); /*dit is de achtergrondskleur van de knop met de class "active"*/
   }
 
   
-body {
-    background-color: var(--primary-color);
-    color: var(--quinary-color);
+body { /*dit zijn de waarden voor de body*/
+    background-color: var(--primary-color); /*dit is de achtergrondskleur van de body*/
+    color: var(--quinary-color); /*dit is de tekstkleur van de body*/
   }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--secondary-color);
-  padding: 10px;
-  text-align: center;
+.footer { /*dit zijn de waarden die worden gegeven aan elk element met class="footer"*/
+  position: fixed; /*hiermee staat de positie van de footer vast*/
+  left: 0; /*hiermee is de footer zover naar links als mogelijk*/
+  bottom: 0; /*hiermee is de footer zover naar onder als mogelijk*/
+  width: 100%; /*hiermee wordt gezorgd dat de footer de hele breedte van het scherm opneemt*/
+  background-color: var(--secondary-color); /*dit is de achtergrondskleur van de footer*/
+  padding: 10px; /*padding zorgt ervoor dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten. Het verschil tussen padding en margin is dat bij padding het in het element zit en bij margin erbuiten*/
+  text-align: center; /*hiermee wordt de text in het midden van de footer geplaatst*/
 }
 
-.button {
-  border: none;
-  color: var(--quinary-color);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  background-color: var(--secondary-color);
-  float: right;
+.button { /*dit zijn de waarden die worden gegeven aan elk element met class="button"*/
+  border: none; /*hiermee wordt een border aangegeven (in dit geval niet)*/
+  color: var(--quinary-color); /*dit is de kleur van de tekst in de knop*/
+  padding: 15px 32px; /*padding zorgt ervoor dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten. Het verschil tussen padding en margin is dat bij padding het in het element zit en bij margin erbuiten*/
+  text-align: center; /*hiermee wordt de text in het midden van de knop geplaatst*/
+  text-decoration: none; /*hiermee wordt de text gedecoreerd*/
+  display: block; /*Dit zorgt dat de tekst de hele lijn opneemt*/
+  font-size: 16px; /*dit geeft aan hoe groot de tekst moet zijn*/
+  margin: 4px 2px; /*margin zorgt dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten.*/
+  cursor: pointer; /*hiermee wordt de muis veranderd wanneer je over de knop hovert*/
+  background-color: var(--secondary-color); /*dit is de achtergrondskleur van de knop*/
+  float: right; /*hiermee wordt de knop aan de rechterkant van het scherm gestopt*/
 }
 
-.column {
-  float:left;
-  width: 30%;
-  padding: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.column { /*dit zijn de waarden die worden gegeven aan elk element met class="column"*/
+  float:left; /*hiermee wordt het aan de linkerkant van het scherm geplaatst*/
+  width: 30%; /*hiermee is de breedte 30% van het scherm*/
+  padding: 15px; /*padding zorgt ervoor dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten. Het verschil tussen padding en margin is dat bij padding het in het element zit en bij margin erbuiten*/
+  font-family: Georgia, 'Times New Roman', Times, serif; /*dit geeft de text fonts aan die worden gebruikt*/
 }

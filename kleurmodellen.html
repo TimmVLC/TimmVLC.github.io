@@ -1,47 +1,49 @@
 <DOCTYPE html> <!--dit is mijn uitleg over de kleurmodellen-->
     <html> <!--dit it het html-element-->
-        <head>
-            <link rel="stylesheet" type="text/css" href="layout.css">
-            <title>Kleurmodellen</title>
-            <meta charset="utf-8">
+        <head> <!--dit is het head-element-->
+            <link rel="stylesheet" type="text/css" href="layout.css"> <!--dit is een link naar het css bestand zodat het de stijl kan gebruiken-->
+            <title>Kleurmodellen</title> <!--dit is de titel van de pagina die bovenin het tablad staat-->
+            <meta charset="utf-8"> <!--Dit is een element dat aangeeft welke code de computer moet gebruiken om de site leesbaar te maken voor ons-->
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
+        </head> <!--hier eindigt het head element-->
         
-        <body>
-            <nav>
-            <ul>
-            <li><a href="index.html">Homepage</a></li>
-            <li><a href="binairstelsel.html">Binaire stelsel</a></li>
-            <li><a href="kleurmodellen.html" class="active">Kleurmodellen</a></li>
-            <li><a href="bitmap.html">Bitmap</a></li>
-            </ul>
-            </nav>
+        <body><!--hier begint de body van de pagina-->
+            <nav> <!--dit is de navigatie bar-->
+            <ul> <!--dit is een unordened list-->
+            <li><a href="index.html">Homepage</a></li> <!--dit is een link naar de homepage-->
+            <li><a href="binairstelsel.html">Binaire stelsel</a></li> <!--dit is een link naar mijn pagina met uitleg over het binaire stelsel-->
+            <li><a href="kleurmodellen.html" class="active">Kleurmodellen</a></li> <!--dit is een link naar mijn pagina met uitleg over kleurmodellen, uitleg over class=active staat bij index.html-->
+            <li><a href="bitmap.html">Bitmap</a></li> <!--dit is een link naar mijn pagina met uitleg over de bitmap en vectorafbeeldingen-->
+            </ul> <!--hier eindigt de unordened list-->
+            </nav> <!--hier eindigt de navigatie bar-->
 
             
-            <button onclick="myFunction()" class="button" >Lightswitch</button>
+            <button onclick="myFunction()" class="button" >Lightswitch</button> <!--dit is een knop die darkmode in en uitschakelt-->
 
-            <br>
-            <div class="column">
-                <h2>Uitleg kleurmodellen</h2>
-               
-                <h4>Het RGB kleurmodel</h4>
+            <br> <!--dit element geeft een witregel aan-->
+            <div class="column"> <!--dit element zegt dat voor de elementen die in de <div></div> staan de css klas "column" krijgen zodat ze dezelfde opmaak hebben-->
+                <h2>Uitleg kleurmodellen</h2> <!--Dit is de heading van de alinea tekst hieronder, het nummer 2 zegt iets over hoe groot de letters zijn-->
                 
-                <p> Een computerscherm bestaat uit heel veel kleine pixels. Elk van die pixels bestaat uit 3 lampjes.
+               
+                <h4>Het RGB kleurmodel</h4> <!--Dit is de heading van de alinea tekst hieronder, het nummer 4 zegt iets over hoe groot de letters zijn-->
+                
+                
+                <p> Een computerscherm bestaat uit heel veel kleine pixels. Elk van die pixels bestaat uit 3 lampjes. <!--Dit is een paragraaf element. Het geeft normale tekst aan.-->
                 Die 3 lampjes hebben allemaal een andere kleur. De kleuren rood, groen en blauw.
                 Een computer kan met die 3 kleuren alle kleuren repliceren met behulp van het RGB kleurmodel. 
                 Dit wordt gedaan door de verschillende lampjes feller of minder fel te laten branden.
                 Rood en groen maken samen geel. Groen en blauw maken samen cyaan en rood en blauw maken samen magenta.
-                Als alle 3 de kleuren worden samengevoegd krijg je wit. Rechts van deze 2 alineas zie je de 2 verschillende kleurmodellen. </p>
+                Als alle 3 de kleuren worden samengevoegd krijg je wit. Rechts van deze 2 alineas zie je de 2 verschillende kleurmodellen. </p> <!--Dit is het einde van het paragraaf element-->
 
             </div>
             
-            <br>
+            <br> <!--dit element geeft een witregel aan-->
             
-            <div class="column">
+            <div class="column"> <!--dit element zegt dat voor de elementen die in de <div></div> staan de css klas "column" krijgen zodat ze dezelfde opmaak hebben-->
                 
-                <h4>Het CMY kleurmodel</h4>
+                <h4>Het CMY kleurmodel</h4> <!--Dit is de heading van de alinea tekst hieronder, het nummer 4 zegt iets over hoe groot de letters zijn-->
                 
-                <p> Het CMY kleurmodel werkt op een andere manier dan het RGB kleurmodel. 
+                <p> Het CMY kleurmodel werkt op een andere manier dan het RGB kleurmodel.  <!--Dit is een paragraaf element. Het geeft normale tekst aan.-->
                     Het CMY kleurmodel wordt gebruikt in printers. Het papier waar de afbeelding op wordt geprint is wit.
                     Hierdoor kan het RGB kleurmodel niet worden gebruikt. De oplossing daarop is het CMY kleurmodel.
                     Bij het CMY kleurmodel worden de verschillende kleuren gerepliceerd uit de kleuren 
@@ -50,23 +52,23 @@
                     en magenta en geel vormen samen rood. Als je al deze kleuren samenvoegd krijg je donkergrijs. 
                     Als je zwart zou willen maken met dit kleurmodel moet je zwart toevoegen aan het model. 
                     Zo krijg je het CMYK-model. Dit staat voor cyan, magenta, yellow en key. Key is in dit geval hetzelfde als zwart.
-                </p>
+                </p> <!--Dit is het einde van het paragraaf element-->
 
             </div>
 
             <img src="RGB-model.png" alt="Het RGB-model" style="width:225px; height:225px;">
 
-            <br>
+            <br> <!--dit element geeft een witregel aan-->
 
             <img src="CMY-model.png" alt="Het CMY-model" >
 
 
-            <br>
+            <br> <!--dit element geeft een witregel aan-->
 
-            <div class="footer">
-                <p>
+            <div class="footer"> <!--Deze div geeft de tekst hieronder de class "footer" zodat het in css de juiste opmaak krijgt-->
+                <p> <!--Dit is een paragraaf element. Het geeft normale tekst aan.-->
                     Gemaakt door Tim de Jongh
-                </p>
+                </p> <!--Dit is het einde van het paragraaf element-->
             </div>
             
             <script>

@@ -77,3 +77,9 @@ body {
   background-color: var(--secondary-color);
   float: right;
 }
+
+.column {
+  float:left;
+  width: 25%;
+  padding: 15px;
+}

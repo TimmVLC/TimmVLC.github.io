@@ -29,6 +29,10 @@ ul { /*Dit zijn de waarden voor het menu.*/
   li { /*dit zijn de waarden voor knoppen van het menu*/
     float: left; /*hiermee worden de knoppen naar de linkerkant verplaatst*/
   }
+
+  li.dropdown {
+    display: inline-block;
+  }
   
   li a, .dropbtn { /*Dit zijn de waarden voor de tekst van het menu*/
     display: block; /*Dit zorgt dat de tekst de hele lijn opneemt*/

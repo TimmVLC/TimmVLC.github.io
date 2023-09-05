@@ -35,7 +35,7 @@ ul { /*Dit zijn de waarden voor het menu.*/
   }
   
   li a, .dropbtn { /*Dit zijn de waarden voor de tekst van het menu*/
-    display: block; /*Dit zorgt dat de tekst de hele lijn opneemt*/
+    display: inline-block; /*Dit zorgt dat de tekst de hele lijn opneemt*/
     color: white; /*Dit is de kleur van de tekst*/
     text-align: center; /*hiermee wordt de tekst in het midden van de knop geplaatst*/
     padding: 14px 16px; /*padding zorgt ervoor dat er een bepaalde hoeveelheid pixels om een text heen zit aan alle 4 de kanten. Het verschil tussen padding en margin is dat bij padding het in het element zit en bij margin erbuiten*/
@@ -55,7 +55,9 @@ ul { /*Dit zijn de waarden voor het menu.*/
     display: block;
   }
 
-  .dropdown-content a:hover {background-color: #f1f1f1;}
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
 
   .dropdown-content a {
     color: black;
@@ -63,6 +65,15 @@ ul { /*Dit zijn de waarden voor het menu.*/
     text-decoration: none;
     display: block;
     text-align: left;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
   }
 
   

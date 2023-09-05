@@ -25,7 +25,11 @@
             </nav> <!--hier eindigt de navigatie bar-->
 
             
-            <button onclick="myFunction()" class="button" >Lightswitch</button> <!--dit is een knop die darkmode in en uitschakelt-->
+            <button
+                class="button"
+                data-theme-toggle
+                aria-label="Change to light theme"
+            >Change to light theme</button> <!--dit is een knop die darkmode in en uitschakelt-->
 
             <br> <!--dit element geeft een witregel aan-->
             <div class="column"> <!--dit element zegt dat voor de elementen die in de <div></div> staan de css klas "column" krijgen zodat ze dezelfde opmaak hebben-->
@@ -81,10 +85,47 @@
             </div><!--Dit is het einde van het div element-->
             
             <script> /* Dit is een javascript die zorgt dat als er op een knop wordt geklikt de css class "dark-theme" aan of uit wordt gezet */
-                function myFunction() {
-                    var element = document.body;
-                    element.classList.toggle("dark-theme");
-                }
+               function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+            if (localStorageTheme !== null) {
+            return localStorageTheme;
+            }
+
+            if (systemSettingDark.matches) {
+            return "dark";
+            }
+
+            return "light";
+            }
+
+            function updateButton({ buttonEl, isDark }) {
+                const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+    
+            buttonEl.setAttribute("aria-label", newCta);
+                buttonEl.innerText = newCta;
+            }
+            
+            function updateThemeOnHtmlEl({ theme }) {
+                document.querySelector("html").setAttribute("data-theme", theme);
+            }
+
+            const button = document.querySelector("[data-theme-toggle]");
+            const localStorageTheme = localStorage.getItem("theme");
+            const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+    
+            let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+    
+            updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+            updateThemeOnHtmlEl({ theme: currentThemeSetting });
+        
+            button.addEventListener("click", (event) => {
+                const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+            localStorage.setItem("theme", newTheme);
+            updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+            updateThemeOnHtmlEl({ theme: newTheme });
+
+            currentThemeSetting = newTheme;
+            }); 
             </script>
 
         </body> <!--dit is het einde van de body van de pagina-->

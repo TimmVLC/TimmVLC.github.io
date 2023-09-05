@@ -1,5 +1,5 @@
 <DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is het html-element-->
+<html data-theme="light"> <!--dit is het html-element-->
     <head> <!--dit is het head-element-->
         <link rel="stylesheet" type="text/css" href="layout.css"> <!--dit is een link naar het css bestand zodat het de stijl kan gebruiken-->
         <title>Homepage</title> <!--dit is de titel van de pagina die bovenin het tablad staat-->
@@ -25,7 +25,13 @@
            </ul> <!--hier eindigt de unordened list-->
         </nav> <!--hier eindigt de navigatie bar-->
 
-        <button onclick="myFunction()" class="button" >Lightswitch</button> <!--dit is een knop die darkmode in en uitschakelt-->
+        <!--<button onclick="myFunction()" class="button" >Lightswitch</button>--> <!--dit is een knop die darkmode in en uitschakelt-->
+        <br>
+        <button
+        type="button"
+        data-theme-toggle
+        aria-label="Change to light theme"
+        >Change to light theme</button>
 
         <br> <!--dit element geeft een witregel aan-->
 
@@ -56,7 +62,7 @@
                 Gemaakt door Tim de Jongh
             </p> <!--Dit is het einde van het paragraaf element-->
         </div> <!--Dit is het einde van het div element-->
-
+        <!--
         <script> /* Dit is een javascript die zorgt dat als er op een knop wordt geklikt de css class "dark-theme" aan of uit wordt gezet */
         function myFunction() {
             var element = document.body;
@@ -80,7 +86,50 @@
 
         }
         </script>
+    -->
+    <script>
+        function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+            if (localStorageTheme !== null) {
+            return localStorageTheme;
+        }
 
+            if (systemSettingDark.matches) {
+            return "dark";
+        }
+
+            return "light";
+        }
+
+        function updateButton({ buttonEl, isDark }) {
+            const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+    
+            buttonEl.setAttribute("aria-label", newCta);
+                buttonEl.innerText = newCta;
+            }
+            
+        function updateThemeOnHtmlEl({ theme }) {
+            document.querySelector("html").setAttribute("data-theme", theme);
+        }
+
+            const button = document.querySelector("[data-theme-toggle]");
+            const localStorageTheme = localStorage.getItem("theme");
+            const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+    
+            let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+    
+            updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+            updateThemeOnHtmlEl({ theme: currentThemeSetting });
+        
+            button.addEventListener("click", (event) => {
+                const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+            localStorage.setItem("theme", newTheme);
+            updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+            updateThemeOnHtmlEl({ theme: newTheme });
+
+            currentThemeSetting = newTheme;
+            }); 
+    </script>
 
     </body> <!--dit is het einde van de body van de pagina-->
 </html> <!--dit is het einde van het html element-->

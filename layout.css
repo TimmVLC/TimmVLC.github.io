@@ -1,4 +1,4 @@
-:root{ /*Met :root worden de standaard kleuren bepaald. Ik heb ze --primary-color etc. genoemd omdat ik ze dan maar op 1 plek hoef te veranderen waardoor het overzichtelijker is.*/
+[data-theme="light"]{ /*Met :root worden de standaard kleuren bepaald. Ik heb ze --primary-color etc. genoemd omdat ik ze dan maar op 1 plek hoef te veranderen waardoor het overzichtelijker is.*/
   --primary-color: rgba(127,255,212,0.5);
   --secondary-color: rgba(127, 255, 212, 1);
   --tertiary-color: linear-gradient(60deg, rgb(75, 100, 200), rgb(0, 255, 150)); /*dit is een gradient die 60 graden is gedraait*/
@@ -7,7 +7,7 @@
 }
 
 
-.dark-theme{ /*Dit is de dark-theme. Wanneer op een knop wordt gedrukt worden via javascript deze kleuren aangezet in plaats van de standaard kleuren.*/
+[data-theme="dark"]{ /*Dit is de dark-theme. Wanneer op een knop wordt gedrukt worden via javascript deze kleuren aangezet in plaats van de standaard kleuren.*/
   --primary-color: rgb(48, 41, 93);
   --secondary-color: rgb(36, 30, 69);
   --tertiary-color: linear-gradient(60deg, rgb(25, 100, 175), rgb(175, 0, 175)); /*dit is een gradient die 60 graden is gedraait*/

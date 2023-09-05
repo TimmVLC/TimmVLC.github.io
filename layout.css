@@ -30,7 +30,7 @@ ul { /*Dit zijn de waarden voor het menu.*/
     float: left; /*hiermee worden de knoppen naar de linkerkant verplaatst*/
   }
   
-  li a { /*Dit zijn de waarden voor de tekst van het menu*/
+  li a, .dropbtn { /*Dit zijn de waarden voor de tekst van het menu*/
     display: block; /*Dit zorgt dat de tekst de hele lijn opneemt*/
     color: white; /*Dit is de kleur van de tekst*/
     text-align: center; /*hiermee wordt de tekst in het midden van de knop geplaatst*/
@@ -39,12 +39,26 @@ ul { /*Dit zijn de waarden voor het menu.*/
     font-family: none; /*dit geeft weer welk font de tekst moet gebruiken, bijvoorbeeld arial*/
   }
   
-  li a:hover { /*Dit zijn de waarden voor de knoppen van het menu wanneer je erover hovert met je muis*/
+  li a:hover, .dropdown:hover .dropbtn { /*Dit zijn de waarden voor de knoppen van het menu wanneer je erover hovert met je muis*/
     background-color: #111; /*dit is de achtergrondskleur van de knoppen van het menu wanneer je erover hovert met je muis*/
   }
 
   .active { /*Dit zijn de waarden die worden gegeven aan elk element met class="active"*/
     background-image: var(--tertiary-color); /*dit is de achtergrondskleur van de knop met de class "active"*/
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
   }
 
   

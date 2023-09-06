@@ -28,8 +28,8 @@
         <button
             class="button"
             data-theme-toggle
-            aria-label="Change to light theme"
-        >Change to light theme</button> <!--dit is een knop die darkmode in en uitschakelt-->
+            aria-label="Light theme"
+        >Light theme</button> <!--dit is een knop die darkmode in en uitschakelt-->
 
         <br> <!--dit element geeft een witregel aan-->
 
@@ -76,7 +76,7 @@
             }
 
             function updateButton({ buttonEl, isDark }) {
-                const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+                const newCta = isDark ? "Light theme" : "Dark theme";
     
                 buttonEl.setAttribute("aria-label", newCta);
                 buttonEl.innerText = newCta;

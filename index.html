@@ -60,54 +60,31 @@
                 Gemaakt door Tim de Jongh
             </p> <!--Dit is het einde van het paragraaf element-->
         </div> <!--Dit is het einde van het div element-->
-        <!--
+     
+
         <script> /* Dit is een javascript die zorgt dat als er op een knop wordt geklikt de css class "dark-theme" aan of uit wordt gezet */
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-theme");
-        }
-
-        function tobedetermined() {
-            if (element.classlist = dark-theme){
-                localStorage.setItem ('theme', 'DM')
-            }
-            else{
-                localstorage.setItem ('theme', 'LM')
-            }
-        }
-
-        function morefunctionsyay() {
-            localstorage.getitem ('theme');
-            if (localstorage.getitem('theme') = DM){
-                document.getElementById("dark-theme")
+            function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+                if (localStorageTheme !== null) {
+                return localStorageTheme;
             }
 
-        }
-        </script>
-    -->
-    <script>
-        function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
-            if (localStorageTheme !== null) {
-            return localStorageTheme;
-        }
+                if (systemSettingDark.matches) {
+                return "dark";
+            }
 
-            if (systemSettingDark.matches) {
-            return "dark";
-        }
+                return "light";
+            }
 
-            return "light";
-        }
-
-        function updateButton({ buttonEl, isDark }) {
-            const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+            function updateButton({ buttonEl, isDark }) {
+                const newCta = isDark ? "Change to light theme" : "Change to dark theme";
     
-            buttonEl.setAttribute("aria-label", newCta);
+                buttonEl.setAttribute("aria-label", newCta);
                 buttonEl.innerText = newCta;
             }
             
-        function updateThemeOnHtmlEl({ theme }) {
-            document.querySelector("html").setAttribute("data-theme", theme);
-        }
+            function updateThemeOnHtmlEl({ theme }) {
+                document.querySelector("html").setAttribute("data-theme", theme);
+            }
 
             const button = document.querySelector("[data-theme-toggle]");
             const localStorageTheme = localStorage.getItem("theme");
@@ -127,7 +104,7 @@
 
             currentThemeSetting = newTheme;
             }); 
-    </script>
+        </script>
 
     </body> <!--dit is het einde van de body van de pagina-->
 </html> <!--dit is het einde van het html element-->

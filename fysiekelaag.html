@@ -1,0 +1,94 @@
+<DOCTYPE html> <!--dit is de homepage van mijn site-->
+    <html data-theme="light"> <!--dit is het html-element-->
+        <head> <!--dit is het head-element-->
+            <link rel="stylesheet" type="text/css" href="layout.css"> <!--dit is een link naar het css bestand zodat het de stijl kan gebruiken-->
+            <title>Homepage</title> <!--dit is de titel van de pagina die bovenin het tablad staat-->
+            <meta charset="utf-8"> <!--Dit is een element dat aangeeft welke code de computer moet gebruiken om de site leesbaar te maken voor ons-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--dit is een element dat aangeeft hoe de browser de grootte etc. van dingen moet laten zien-->
+        </head> <!--hier eindigt het head element-->
+    
+        <body> <!--hier begint de body van de pagina-->
+        
+            <nav> <!--dit is de navigatie bar-->
+                <ul> <!--dit is een unordened list-->
+                <li><a href="index.html" class="active">Homepage</a></li> <!--dit is een link naar de homepage, de class is "avtive" omdat het dan een andere kleur heeft.-->
+                <li><a href="binairstelsel.html">Binaire stelsel</a></li> <!--dit is een link naar mijn pagina met uitleg over het binaire stelsel-->
+                <li><a href="kleurmodellen.html">Kleurmodellen</a></li> <!--dit is een link naar mijn pagina met uitleg over kleurmodellen-->
+                <li><a href="bitmap.html">Bitmap</a></li> <!--dit is een link naar mijn pagina met uitleg over de bitmap en vectorafbeeldingen-->
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+               </ul> <!--hier eindigt de unordened list-->
+            </nav> <!--hier eindigt de navigatie bar-->
+        
+            <button
+                class="button"
+                data-theme-toggle
+                aria-label="Light theme"
+            >Light theme</button> <!--dit is een knop die darkmode in en uitschakelt-->
+    
+            <br> <!--dit element geeft een witregel aan-->
+    
+    
+           
+     
+            
+           
+    
+            <div class="footer"> <!--Deze div geeft de tekst hieronder de class "footer" zodat het in css de juiste opmaak krijgt-->
+                <p> <!--Dit is een paragraaf element. Het geeft normale tekst aan.-->
+                    Gemaakt door Tim de Jongh
+                </p> <!--Dit is het einde van het paragraaf element-->
+            </div> <!--Dit is het einde van het div element-->
+         
+    
+            <script> /* Dit is een javascript die zorgt dat als er op een knop wordt geklikt de css class "dark-theme" aan of uit wordt gezet */
+                function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+                    if (localStorageTheme !== null) {
+                    return localStorageTheme;
+                }
+    
+                    if (systemSettingDark.matches) {
+                    return "dark";
+                }
+    
+                    return "light";
+                }
+    
+                function updateButton({ buttonEl, isDark }) {
+                    const newCta = isDark ? "Light theme" : "Dark theme";
+        
+                    buttonEl.setAttribute("aria-label", newCta);
+                    buttonEl.innerText = newCta;
+                }
+                
+                function updateThemeOnHtmlEl({ theme }) {
+                    document.querySelector("html").setAttribute("data-theme", theme);
+                }
+    
+                const button = document.querySelector("[data-theme-toggle]");
+                const localStorageTheme = localStorage.getItem("theme");
+                const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+        
+                let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+        
+                updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+                updateThemeOnHtmlEl({ theme: currentThemeSetting });
+            
+                button.addEventListener("click", (event) => {
+                    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+    
+                localStorage.setItem("theme", newTheme);
+                updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+                updateThemeOnHtmlEl({ theme: newTheme });
+    
+                currentThemeSetting = newTheme;
+                }); 
+            </script>
+    
+        </body> <!--dit is het einde van de body van de pagina-->
+    </html> <!--dit is het einde van het html element-->

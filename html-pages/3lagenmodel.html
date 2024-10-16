@@ -2,7 +2,7 @@
     <html data-theme="light"> <!--dit is het html-element-->
         <head> <!--dit is het head-element-->
             <link rel="stylesheet" type="text/css" href="layout.css"> <!--dit is een link naar het css bestand zodat het de stijl kan gebruiken-->
-            <title>Logischelaag</title> <!--dit is de titel van de pagina die bovenin het tablad staat-->
+            <title>Drielagenmodel</title> <!--dit is de titel van de pagina die bovenin het tablad staat-->
             <meta charset="utf-8"> <!--Dit is een element dat aangeeft welke code de computer moet gebruiken om de site leesbaar te maken voor ons-->
             <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--dit is een element dat aangeeft hoe de browser de grootte etc. van dingen moet laten zien-->
         </head> <!--hier eindigt het head element-->
@@ -11,19 +11,19 @@
         
             <nav> <!--dit is de navigatie bar-->
                 <ul> <!--dit is een unordened list-->
-                <li><a href="index.html">Homepage</a></li> <!--dit is een link naar de homepage, de class is "avtive" omdat het dan een andere kleur heeft.-->
-                <li><a href="binairstelsel.html">Binaire stelsel</a></li> <!--dit is een link naar mijn pagina met uitleg over het binaire stelsel-->
-                <li><a href="kleurmodellen.html">Kleurmodellen</a></li> <!--dit is een link naar mijn pagina met uitleg over kleurmodellen-->
-                <li><a href="bitmap.html">Bitmap</a></li> <!--dit is een link naar mijn pagina met uitleg over de bitmap en vectorafbeeldingen-->
+                <li><a href="../index.html">Homepage</a></li> <!--dit is een link naar de homepage, de class is "avtive" omdat het dan een andere kleur heeft.-->
+                <li><a href="/html-pages/binairstelsel.html">Binaire stelsel</a></li> <!--dit is een link naar mijn pagina met uitleg over het binaire stelsel-->
+                <li><a href="/html-pages/kleurmodellen.html">Kleurmodellen</a></li> <!--dit is een link naar mijn pagina met uitleg over kleurmodellen-->
+                <li><a href="/html-pages/bitmap.html">Bitmap</a></li> <!--dit is een link naar mijn pagina met uitleg over de bitmap en vectorafbeeldingen-->
                 <li class="dropdown active">
-                    <a href="3lagenmodel.html" class="dropbtn">Drielagenmodel</a>
+                    <a href="/html-pages/3lagenmodel.html" class="dropbtn">Drielagenmodel</a>
                     <div class="dropdown-content">
-                        <a href="fysiekelaag.html">Fysieke laag</a>
-                        <a href="logischelaag.html" class="active">Logische laag</a>
-                        <a href="toepassingslaag.html">Toepassings laag</a>
+                        <a href="/html-pages/fysiekelaag.html">Fysieke laag</a>
+                        <a href="/html-pages/logischelaag.html">Logische laag</a>
+                        <a href="/html-pages/toepassingslaag.html">Toepassings laag</a>
                     </div>
-                <li><a href="databases.html">Databases</a></li>
-                </ul> <!--hier eindigt de unordened list-->
+               <li><a href="/html-pages/databases.html">Databases</a></li>     
+               </ul> <!--hier eindigt de unordened list-->
             </nav> <!--hier eindigt de navigatie bar-->
         
             <button
@@ -34,30 +34,38 @@
     
             <br> <!--dit element geeft een witregel aan-->
     
-    
-           <div class="column">
-            <h4> Operating system </h4>
-                <p> Een operating system, in het Nederlands besturingssysteem, is een software die de hardware vertelt wat het moet doen.
-                    Hierdoor hoeven applicatieontwikkelaars dat niet zelf te doen. 
-                    Voorbeelden van besturingssystemen zijn Windows, Ios, Android en Linux. </p>
+            <div class="column"> 
+                <H4> Het drielagenmodel </H4>
 
-            <h4> talen/compilers </h4>
-                <p> Om iets te programmeren heb je een taal nodig om het in te schrijven.
-                    Deze programmeertalen zijn talen die "turingvolledig" zijn.
-                    Turingvolledig betekent dat de taal in staat is om alle taken uit te voeren die een moderne computer kan uitvoeren.
-                    Voorbeelden van programmeertalen zijn Java, python en Html
-                    Een compiler is iets dat de programmeertaal omzet in een uitvoerbaar programma. Een soort vertaler dus.
-                     </p>
+                <p>
+                    Het 3-lagen model is een model waarbij een computer in 3 lagen wordt verdeeld.
+                     Deze lagen zijn de fysieke laag, de logische laag en de toepassingslaag.
+                </p>
 
-            <h4> DBMS </h4>
-                <p> DBMS, ook wel databasemanagementsysteem genoemd, is een systeem dat gegevens opslaat en beheert.
-                    Hiermee kan een computer snel gegevens vinden en verwerken. 
-                    Het is dan ook nodig om databases goed te laten werken. </p>
-           </div>
-           
-           <img src="windows.png" alt="windows logo" style="width:363px; height:320px;">
+                <h4> De fysieke laag </h4>
+
+                <p>
+                    De fysieke laag is eigenlijk gewoon alle hardware van je computer. 
+                    Voorbeelden hiervan zijn een toetsenbord, een muis of een printer.
+                </p>
+
+                
+                <h4> De logische laag </h4>
+
+                <p>
+                    De logische laag is de laag van het 3-lagenmodel waar de systeemsoftware in zit.
+                    Dit zijn bijvoorbeeld de programmeertalen, het besturingssysteem (Android, Windows, Linux, etc.)
+                </p>
+
+
+                <h4> De toepassingslaag </h4>
+
+                <p>
+                    De toepassingslaag gaat over de software van de computer. Deze laag omvat dingen zoals spellen, browsers en andere apps.
+                </p>
+            </div>
             
-           
+            <img src="image.png" alt="3 lagen model van mijn telefoon" style="width:441px; height:525px;">
     
             <div class="footer"> <!--Deze div geeft de tekst hieronder de class "footer" zodat het in css de juiste opmaak krijgt-->
                 <p> <!--Dit is een paragraaf element. Het geeft normale tekst aan.-->
